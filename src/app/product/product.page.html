@@ -1,0 +1,312 @@
+<ion-header>
+  <app-navbar></app-navbar>
+</ion-header>
+
+<!-- <ion-content>
+    <div class="container-fluid ">
+        <div class="row m-5">
+            <div class="col-md-1 p-1">
+                <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                    <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                </div>
+                <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                    <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                </div>
+                <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                    <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                </div>
+                <div class="row mb-3" style="height: 100px; width: 100px; background-color: #d6eefa;"> 
+                    <img src={{picture}} style="height: 100px; width: 100px; display: block; object-fit: cover; ">
+                </div>
+            </div>
+            <div class="col-md-4 p-1" style="height:auto;">
+                <div class="row " >
+                    <img src={{picture}} style="height: 600px ;width: 450px; display: block; object-fit: cover; ">
+                </div>
+    
+                <div class="row mt-3">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="fa fa-pinterest"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 "  >
+                <div class="row py-2" style="font-weight: bolder;font-size: 22px;"> 
+                    {{product}}
+                </div>
+                <div class="row py-2" style="font-weight: bold;font-size: 25px;">
+                    {{price}}
+                </div>
+                
+                <div class="row pb-3"  >
+                    <button class="sizebutton mr-2" style="width: 100px; color: black;">SMALL</button>
+                    <button class="sizebutton mx-2" style="width: 100px;color: black;">MEDIUM</button>
+                    <button class="sizebutton mx-2" style="width: 100px;color: black;">LARGE</button>
+                </div>
+                
+                <div class="row py-3 ">
+                    <div class="col-md-5 ">
+                        <button type="button" class="loginbutton px-5" style="width: 300px;font-weight: bold; transition-duration: 0.5s;" >BUY NOW</button>
+                    </div>
+                    <div class="col-md-5">
+                        <button type="button" class="lbutton px-5" style="width: 300px;font-weight: bold; transition-duration: 0.5s;">ADD TO CART</button>
+                    </div>
+    
+                </div>
+                <div class="row py-3">
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-3  pt-2">
+                                <i class="material-icons" style="font-size:30px">local_airport</i>
+                            </div>
+                            <div class="col-md-9 " style="font-size: 15px;">
+                                <b>ORDERS SHIP</b> <br> in 5 business days
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="row" >
+                            <div class="col-md-3  pt-2">
+                                <i class='fas fa-shipping-fast' style="font-size: 25px; " ></i> 
+                            </div>
+                            <div class="col-md-9 " style="font-size: 15px;">
+                                <b>FREE</b> <br> Shipping
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-2  pt-2">
+                                <i class="fas fa-thumbs-up" style="font-size: 25px; "></i>
+                            </div>
+                            <div class="col-md-10 " style="font-size: 15px;">
+                                <b>30 Days</b> <br> Return and Refund
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row">
+                            <div class="col-md-3  pt-2">
+                                <i class="fas fa-check-circle" style="font-size: 30px;"></i>
+                            </div>
+                            <div class="col-md-9 " style="font-size: 15px;">
+                                <b>Secure</b> <br> Payments
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row pt-2" style="font-weight: bold;">
+                    PRODUCT DETAILS
+                </div>
+                <hr width="110%" color="grey">  
+                <div class="row py-1" style="font-size: 14px;">
+                    <b>Color</b> - {{color}}
+                </div>
+                <div class="row py-1" style="font-size: 14px;">
+                    <b>Material</b> - {{weight}}
+                </div>
+                <div class="row py-1" style="font-size: 14px;">
+                    <b>Weight</b> - {{dimension}}
+                </div>
+                <div class="row py-1" style="font-size: 14px;">
+                    <b>Manufacturer</b> - {{warranty}}
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+<ion-content class="container-fluid">
+  <div class="row p-4">
+    <div class="col-md">
+      <p style="color: #ababab" class="pageProgress">
+        <span routerLink = "/homepage">HOME</span> > <span routerLink = "{{'/' + group}}">{{group.toUpperCase()}}</span> > <span routerLink = "{{'/' + group}}" [queryParams] = "{'category' : category}" >{{category}} </span>> <strong>{{data.subname}}</strong>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+      <div class="row ml-4 mt-1" *ngFor="let img of data.img; let i = index">
+        <div class="col-md">
+          <img
+            class="border border-dark side_view"
+            id="{{i}}"
+            src="{{img}}"
+            alt="Image {{i}}"
+            (mouseover)="change(i,$event.target.src)"
+            (click)="change(i)"
+            style="cursor: pointer; max-width: 50px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col">
+          <div class="main_view">
+            <img
+              [src]="data.src"
+              style="padding: 100px; padding-top: 0%; min-width: 70px"
+              id="main"
+              alt="IMAGE"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md">
+      <div class="row">
+        <div class="col-md">
+          <h1 style="font-weight: 600">{{data.name}}</h1>
+        </div>
+      </div>
+      <div class="row lightPara">
+        <div class="col-md">
+          <p>Size</p>
+        </div>
+      </div>
+      <div class="row pb-3">
+        <div class="col-md-2" *ngFor="let Bitem of buttonArray">
+          <button class="sizebutton mr-2" style="width: 100px; color: black">
+            {{Bitem}}
+          </button>
+        </div>
+      </div>
+      <div class="row lightPara">
+        <div class="col-md">
+          <span class="lightPara-second;"
+            >Low Stock : <span class="redLine">Only 5 Left!</span>
+          </span>
+        </div>
+      </div>
+      <div class="row mt-4 py-2 font-stretch">
+        <div class="col-md-5">
+          <button class="btn" (click) = "addToCart()">ADD TO CART</button>
+        </div>
+        <div class="col-md-5">
+          <button class="btn">BUY NOW</button>
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-3">
+          <div class="row">
+            <div class="col-5">
+              <img
+                class="icon"
+                src="../../assets/images/ordership.png"
+                alt="plane"
+              />
+            </div>
+            <div class="col iconLine">
+              <p style="font-weight: 700; font-size: 15px">
+                ORDERS SHIP<span class="sub">In 5 Business days</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-5">
+              <img
+                class="icon"
+                src=".../../assets/images/free.png"
+                alt="shipping"
+              />
+            </div>
+
+            <div class="col iconLine">
+              <p style="font-weight: 700; font-size: 15px">
+                FREE <span class="sub">Shipping</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-5">
+              <img
+                class="icon"
+                src="../../assets/images/thumps.png"
+                alt="return"
+              />
+            </div>
+
+            <div class="col iconLine">
+              <p style="font-weight: 700; font-size: 15px">
+                30 DAY <span class="sub">Return and Refund</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="row">
+            <div class="col-5">
+              <img
+                class="icon"
+                src="../../assets/images/secure.png"
+                alt="secure"
+              />
+            </div>
+
+            <div class="col iconLine">
+              <p style="font-weight: 700; font-size: 15px">
+                SECURE <span class="sub">Payments</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md">
+          <h3 class="divider line razor text-monospace" style="font-weight: bold;" contenteditable>PRODUCT DETAILS</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5">
+          <div class="row">
+            <div class="col-6 details" style="font-weight: bold;
+            font-size: 15px;">
+              <p>Price</p>
+              <p>Color</p>
+              <p>Material</p>
+              <p>Weight</p>
+              <p>Manufacturer</p>
+            </div>
+            <div class="col details">
+              <p> Rs. {{data.price}}</p>
+                <p>{{data.color}}</p>
+                <p>{{data.material}}</p>
+                <p>{{data.weight}}g</p>
+                <p>{{data.manufacturer}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row pt-0">
+    <div class="col-md-6">
+      <div class="row justify-content-center pt-4">
+        <a href="#">
+          <div class="fa fa-facebook-f socialIcon"></div>
+        </a>
+        <a href="#">
+          <div class="fa fa-twitter socialIcon"></div>
+        </a>
+        <a href="#">
+          <div class="fa fa-pinterest socialIcon"></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>

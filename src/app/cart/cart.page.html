@@ -1,0 +1,140 @@
+<ion-header>
+  <app-navbar></app-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="row head">
+      <div class="col mt-3 text-uppercase">
+        <h2 #hello>{{name}}'s Cart</h2>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-md-8">
+        <div
+          class="border border-1 mt-3 rounded-lg p-2 bg-light box"
+          *ngFor="let item of userCart ; let i= index"
+        >
+          <div class="row">
+            <div class="col-3 p-3">
+              <img
+                class="w-75 pl-2 imgs"
+                src="{{item.src}}"
+                alt="ITEM"
+                (click)="navigate(i,item.name)"
+                style="cursor: pointer"
+              />
+            </div>
+            <div class="col">
+              <p class="name text-info pt-2">
+                <span class="heading" (click)="navigate(i,item.name)"
+                  >{{item.name}}</span
+                >
+
+                <span class="float-right pr-3 text-dark price"
+                  >&#8377;{{item.price * qty[i]}}</span
+                >
+              </p>
+              <p class="subname mt-1">{{item.subname}}</p>
+              <span class="float-right pr-3">
+                <del class="pr-2 text-secondary"
+                  >&#8377;{{((100/(100-item.offer))*item.price*qty[i]) | number :
+                  '1.0-0'}}</del
+                >
+                <span class="text-success off"> {{item.offer}}% OFF </span>
+              </span>
+              <p class="soldBy">Sold by : {{item.manufacturer}}</p>
+              <span class="quantity font-weight-bold mr-2">Qty</span>
+              <input
+                type="number"
+                name="num"
+                id="quantity"
+                min="1"
+                [(ngModel)]="qty[i]"
+                (change)="updateQty(i)"
+              />
+              <button
+                type="button"
+                id="ok{{i}}"
+                class="okButton btn btn-sm btn-success ml-2 rounded-circle"
+                (click)="dissapear(i)"
+                style="display: none"
+              >
+                <span style="font-size: 14px">&#10003;</span>
+              </button>
+              <button
+                type="button"
+                class="
+                  border
+                  d-block
+                  mt-4
+                  rounded-lg
+                  btn-sm
+                  float-right
+                  mr-2
+                  btn btn-outline-secondary
+                "
+                (click)="remove(i)"
+              >
+                REMOVE
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mt-3 border border-1 pl-2 pt-1 MyCart" id="cartD" *ngIf = "userCart.length != 0">
+          <div class="my-2">
+            <span class="pl-2 cartDetailsHeading"
+              >CART DETAILS &#40;{{NumberItems}} Items&#41;
+            </span>
+          </div>
+          <hr class="mt-2" />
+
+          <div class="mt-3 cartDetails">
+            <div class="my-2">
+              <span class="pl-2 totalMRP">Total MRP</span
+              ><span class="float-right mr-2"
+                >&#8377;{{TotalMRP | number : '1.0-0'}}</span
+              >
+            </div>
+            <div class="mt-2">
+              <span class="pl-2 discount">Discount</span
+              ><span class="float-right mr-2 text-success"
+                >&#8722;&#8377;{{TotalMRP - totalPrice | number :
+                '1.0-0'}}</span
+              >
+            </div>
+            <div class="mt-2">
+              <span class="pl-2 discount">Delievery Charges </span>
+              <span style="vertical-align: middle" id="info" class="text-secondary"
+              *ngIf = "DFee != 0"
+                ><i class="fa fa-info-circle" aria-hidden="true"
+                matTooltip = "{{tooltipStatement}}"
+                matTooltipClass="tooltip-info"
+                matTooltipPosition = "below"
+                [matTooltipHideDelay]="250"
+                ></i></span
+              ><span
+                class="float-right mr-2 text-success"
+                id="dfee"
+                [ngClass]="class1"
+                >{{DFeeStatement}}</span
+              >
+            </div>
+          </div>
+          <hr />
+          <div class="my-2 TotalAmount">
+            <span class="pl-2">Total Amount</span
+            ><span class="float-right mr-2">&#8377;{{totalPrice + DFee}}</span>
+          </div>
+          <div class="p-2">
+            <button class="btn btn-warning w-100">PROCEED TO BUY</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ion-content>
