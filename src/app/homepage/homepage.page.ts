@@ -98,16 +98,18 @@ export class HomepagePage implements OnInit {
 
     })
     this.topStories = [
-      {picture: "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/20/713cc321-8d48-442b-8ab3-c36b216326d81626790178195-Desk_Wrong.jpg"},
-      {picture: "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/20/4be4563c-6020-4608-89ea-5a5c731828301626792068663-Casual-Shirts_Desk.jpg"},
-      {picture: "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/20/57a46c9b-d55f-4c3d-bbbf-9cf57365287c1626792068632-Sports-Shoes_Desk.jpg"},
-      { picture: "https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/7/20/6d0b0437-0e21-4b15-9a83-4794199136bb1626792068598-cat-fest-dk-april.jpg"}
+      {picture: "https://sslimages.shoppersstop.com/sys-master/root/h5f/hc6/17112096571422/Indian-Terrain-Static-Web.jpg"},
+      {picture: "https://sslimages.shoppersstop.com/sys-master/root/he9/h55/17115202748446/Home-PG-Carousals-Watches-Web.jpg"},
+      {picture: "https://sslimages.shoppersstop.com/sys-master/root/h1e/h0e/16535186997278/WFH-Main-Web.jpg"},
+      { picture: "https://sslimages.shoppersstop.com/sys-master/root/h87/h0e/17112093229086/20thjuly_web.jpg"},
+      { picture: "https://sslimages.shoppersstop.com/sys-master/root/hf9/h44/17120606945310/denims_web.jpg"}
     ]
     this.topStories1 = [
       {picture: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/25/085719b1-c71e-4f47-950c-9a6b7f291fac1598348260370-Jack-_-Jones.jpg"},
       {picture: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/83d9ca97-4aa3-46ce-bd28-b135d3b94a021595935030673-Content-ethnicwear-essentials-everydaykurtas.jpg"},
       {picture: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/b85eb6be-0223-4cca-bc81-56ca3089daf11597841355970-Content-westernwear-Essentials-Women-s-Trousers--copy--.jpg"},
       { picture: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/4aa58fe6-8c61-4e37-9fa8-436c31aecb211597840566511-Content-sportswear-essentials-activewear.png"}
+      
     ]
     this.topStories2 = [
       {picture: "https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/5/a6de806a-b58b-460b-97fd-d78d80eab39b1596641021693-Women-s-Ethnic-Wear_Anouk.jpg"},
