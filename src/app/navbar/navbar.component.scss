@@ -18,11 +18,16 @@ a:active {
   left: auto;
 }
 .dropdown-menu-center {
+<<<<<<< HEAD
   left: 50% !important;
+=======
+  left: 5% !important;
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   right: auto !important;
 
   transform: translate(-50%, 0) !important;
 }
+<<<<<<< HEAD
 .navbar-brand > h3 {
   color: #05080e;
   font-family:  "Brush Script MT", cursive;
@@ -35,3 +40,53 @@ a:active {
   cursor: pointer;
 }
 
+=======
+// .dropdown-item:active{
+//   color: white !important;
+// }
+// .dropdown-item a:active{
+//   color: white !important;
+// }
+.navbar-brand > h3 {
+  color: #0855fa;
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.login{
+  font-weight: 500;
+  color: #0855fa;
+}
+.login:hover{
+  text-decoration: none;
+}
+
+.login:active{
+  color: white;
+}
+
+.signup:hover{
+  text-decoration: underline;
+}
+
+.signin:hover{
+  text-decoration: underline;
+}
+
+.statement{
+  font-weight: 200;
+}
+
+.helloUser{
+  font-weight: 500;
+}
+
+.item1{
+ //
+}
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d

@@ -4,7 +4,11 @@
     style="background-color: rgb(105, 163, 182)"
   >
     <a style="text-decoration: none" class="navbar-brand"
+<<<<<<< HEAD
       ><h3 routerLink="/homepage">Shopper's Stop</h3></a
+=======
+      ><h3 routerLink="/homepage">SHOPPER'S STOP</h3></a
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
     >
     <button
       class="navbar-toggler"
@@ -82,11 +86,15 @@
               aria-haspopup="true"
               aria-expanded="false"
               ><i class="material-icons iconstyle icon-color">&#xe7fd;</i>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
               <div
                 class="dropdown-menu dropdown-menu-center"
                 aria-labelledby="dropdownMenuButton"
               >
+<<<<<<< HEAD
                 <nav>
                   <a
                     class="dropdown-item"
@@ -136,6 +144,76 @@
                     >Logout</a
                   >
                 </nav>
+=======
+                <div *ngIf="token; else elseBlock">
+                  <nav>
+                    <a
+                      class="dropdown-item"
+                      routerLink="/profile"
+                      routerLinlActive="active"
+                    >
+                      <div>
+                        <p style="font-size: 20px; color: blue">
+                          {{ user.name }}<br /><a
+                            style="
+                              font-size: 15px;
+                              color: black;
+                              margin-top: 0%;
+                            "
+                            href="#"
+                            >{{ user.email }}</a
+                          >
+                        </p>
+                        <!-- <a style="margin-top: 0%; "href="#">{{u.email}}</a> -->
+                      </div>
+                    </a>
+                  </nav>
+
+                  <div class="dropdown-divider"></div>
+                  <nav>
+                    <a
+                      class="dropdown-item"
+                      routerLink="/profile"
+                      routerLinlActive="active"
+                      >Profile</a
+                    >
+                  </nav>
+
+                  <nav>
+                    <a
+                      class="dropdown-item"
+                      routerLink="/history"
+                      routerLinlActive="active"
+                      >Order History</a
+                    >
+                  </nav>
+
+                  <div class="dropdown-divider"></div>
+
+                  <nav>
+                    <a
+                      class="dropdown-item"
+                      style="color: red"
+                      (click) = "logOut()"
+                      routerLinlActive="active"
+                      >Logout</a
+                    >
+                  </nav>
+                </div>
+                <ng-template #elseBlock>
+                  <div class=" item1 dropdown-item">
+                    <h4 class="helloUser mb-1">Hello User</h4>
+                    <p class="pr-4 statement">
+                      To access account and manage orders
+                    </p>
+                  </div>
+                  <div class="dropdown-divider my-1"></div>
+                  <a class="dropdown-item login">
+                    <span class="signup" routerLink="/signup">SIGNUP</span
+                    >/<span class="signin" routerLink="/login">SIGNIN</span>
+                  </a>
+                </ng-template>
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
               </div>
             </a>
           </li>

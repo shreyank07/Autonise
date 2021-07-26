@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
+=======
+import { JsonPipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
 import { UserService } from '../user.service';
 
 @Component({
@@ -17,16 +24,44 @@ export class SignupPage implements OnInit {
   emailBool = false;
   users = [];
   todo = {};
+<<<<<<< HEAD
   constructor(private http: HttpClient) {}
+=======
+  clickBool = false;
+  constructor(private http: HttpClient, private user: UserService,private route : Router) {}
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
 
   ngOnInit(): void {
     // this.user=this.userinfo.getdata()
   }
 
+<<<<<<< HEAD
   login(form, e) {
     if (e.keyCode == 13) {
       if (!form.invalid) {
         console.log(this.todo);
+=======
+  submit(f,e){
+    this.clickBool = true
+    this.login(f,e)
+  }
+
+  login(form, e) {
+    if (e.keyCode == 13 || this.clickBool ) {
+      if (!form.invalid) {
+        console.log(this.todo)
+        this.user.register(this.todo).subscribe(
+          data => {
+            console.log("reg success",data)
+            alert(data);
+            this.route.navigate(["/login"])
+          },
+          error => {
+            console.log("Reg unsucess",error)
+            alert(error['error']);
+          }
+        );
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
       } else {
         if (!this.todo['name']) {
           this.inputName.setFocus();
@@ -38,7 +73,15 @@ export class SignupPage implements OnInit {
           this.inputPassword.setFocus();
         }
         if (this.todo['email']) {
+<<<<<<< HEAD
           document.getElementById('EmailValidation').classList.remove('d-none');
+=======
+          if (!this.emailBool){
+          document.getElementById('EmailValidation').classList.remove('d-none');
+          if(this.todo['name'])
+          this.inputEmail.setFocus()
+          }
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
         }
       }
     }
@@ -63,6 +106,11 @@ export class SignupPage implements OnInit {
       //
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   change3(e) {
     document.getElementById('EmailValidation').classList.add('d-none');
     // this.check3(e)
@@ -110,9 +158,17 @@ export class SignupPage implements OnInit {
     ) {
       a.classList.add('text-success');
       a.classList.remove('text-danger');
+<<<<<<< HEAD
     } else {
       a.classList.add('text-danger');
       a.classList.remove('text-success');
+=======
+      this.emailBool = true
+    } else {
+      a.classList.add('text-danger');
+      a.classList.remove('text-success');
+      this.emailBool = false
+>>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
     }
   }
 }
