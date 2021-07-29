@@ -6,19 +6,20 @@
     <div class="row " >
       <div
         class="col-md-12 ">
-      <ion-slides class="slide-padding" pager="true" [options]="slideOpts">
+      <ion-slides class="slide-padding active" pager="true" [options]="slideOpts">
         <ion-slide *ngFor="let story of topStories">
         
-            <ion-img src="{{story.picture}}" style="height: 500px;width: 100%;"></ion-img>
+            <ion-img src="{{story.picture}}" routerLink="{{story.link}}" style="height: 500px;width: 100%;"></ion-img>
             <ion-slides pager="true" [options]="slideOptsreverse"></ion-slides>
             </ion-slide>
     </ion-slides></div>
     </div>
     <div class="row text-center">
       <div class="col-md-3"></div>
-      <div class="col-md-6 mt-3">
-        <strong style="font-size: 25px"><p style="font-size: 35px;">BEST SELLER OF THE SEASON</p></strong
-        ><br style="font-size:100px" /><p style="font-size: 25px"> Find yourself. Great stores. Great choices. It's all about you.<br>It's happening here! Just a step away from home.</p>
+      <div class="col-md-6 mt-5">
+        <strong class="mt-4" style="font-size: 25px;"><p style="font-size: 35px;">BEST SELLER OF THE SEASON</p></strong
+        ><br style="font-size:100px" /><p style="font-size: 25px"> Find yourself. Great stores. Great choices. It's all about you.</p>
+          <p style="font-size: 25px">It's happening here! Just a step away from home.</p>
       </div>
       <div class="col-md-3"></div>
     </div>
@@ -78,18 +79,18 @@
     <div class="row  pt-4">
       <div class="col-md-4"></div>
       <div class="col-md-4">
-        <button class="btn btn-primary" style="align-items: center;margin-left: 30%;">VIEW ALL PRODUCTS</button>
+        <button class="btn btn-primary" style="align-items: center;margin-left: 8%;">VIEW ALL PRODUCTS</button>
       </div>
       <div class="col-md-4"></div>
     </div>
   
-    <div class="row  mt-2 text-center " style=" margin: 20px">
+    <div class="row  mt-5 text-center " style=" margin: 20px">
       
       <div class="col-md-3">
         <ion-slides class="slide-padding" pager="true" [options]="slideOpts1">
           <ion-slide *ngFor="let story of topStories1">
           
-              <ion-img src="{{story.picture}}" style="height: 400px;"></ion-img>
+              <ion-img src="{{story.picture}}" routerLink="{{story.link}}" style="height: 400px; width: 100%;"></ion-img>
               
           
           </ion-slide>
@@ -99,7 +100,7 @@
         <ion-slides class="slide-padding" pager="true" [options]="slideOpts2">
           <ion-slide *ngFor="let story of topStories2">
           
-              <ion-img src="{{story.picture}}" style="height: 400px;"></ion-img>
+              <ion-img src="{{story.picture}}" routerLink="{{story.link}}" style="height: 400px;width: 100%;"></ion-img>
               
           
           </ion-slide>
@@ -109,7 +110,7 @@
         <ion-slides class="slide-padding" pager="true" [options]="slideOpts3">
           <ion-slide *ngFor="let story of topStories3">
           
-              <ion-img src="{{story.picture}}" style="height: 400px;"></ion-img>
+              <ion-img src="{{story.picture}}" routerLink="{{story.link}}" style="height: 400px;width: 100%;"></ion-img>
               
           
           </ion-slide>
@@ -119,7 +120,7 @@
         <ion-slides class="slide-padding" pager="true" [options]="slideOpts4">
           <ion-slide *ngFor="let story of topStories4">
           
-              <ion-img src="{{story.picture}}" style="height: 400px;"></ion-img>
+              <ion-img src="{{story.picture}}" routerLink="{{story.link}}" style="height: 400px;width: 100%;"></ion-img>
               
           
           </ion-slide>
@@ -128,7 +129,7 @@
       
       
     </div>
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-2 ">
         <img src="http://127.0.0.1:8000/static/jackets.jpg" class="image-hover-highlight" style="height: 250px;;">
@@ -143,7 +144,7 @@
         <div class="row "><p style="text-align: center;">Jackets</p></div>
       </div>
       <div class="col-md-3"></div>
-    </div>
+    </div> -->
     <!-- <div
       class="row text-center mt-0 ml-5 py-0 pt-0 text-center"
       style="padding-left: 260px"
@@ -174,8 +175,99 @@
       </div>
       <div class="col-md-2 mx-5"></div>
     </div> -->
-
-    <div
+<div class="row mb-5 pt-3 " style="margin-left: 80px; margin-top: 100px;">
+  <div class="col-md-4 ">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row">
+          <img
+          src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
+          class="image"
+         style="width: 100px;margin-left: 50px;"
+        />
+        </div>
+        <div class="row" style="margin-left: 50px;margin-top: 10px;">
+          <span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span>
+        </div>
+        <div class="row">
+          <p style="font-size: 15px">
+            lorem ipsum dolor sit amet,consectetur<br />adispicing elit,sed do
+            eiusmoet dolore<br />magna aliqua.Ut enim ad minimet<br />dolore magna
+            aliqua.Ut enim
+          </p>
+        </div>
+        
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row">
+          <img
+          src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
+          class="image"
+         style="width: 100px;margin-left: 50px;"
+        />
+        </div>
+        <div class="row" style="margin-left: 50px;margin-top: 10px;">
+          <span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span>
+        </div>
+        <div class="row">
+          <p style="font-size: 15px">
+            lorem ipsum dolor sit amet,consectetur<br />adispicing elit,sed do
+            eiusmoet dolore<br />magna aliqua.Ut enim ad minimet<br />dolore magna
+            aliqua.Ut enim
+          </p>
+        </div>
+        
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="col-md-4 ">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="row">
+          <img
+          src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-user-vector-avatar-png-image_4830521.jpg"
+          class="image"
+         style="width: 100px;margin-left: 50px;"
+        />
+        </div>
+        <div class="row" style="margin-left: 50px;margin-top: 10px;">
+          <span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span
+            ><span class="fa fa-star checked"></span>
+        </div>
+        <div class="row">
+          <p style="font-size: 15px">
+            lorem ipsum dolor sit amet,consectetur<br />adispicing elit,sed do
+            eiusmoet dolore<br />magna aliqua.Ut enim ad minimet<br />dolore magna
+            aliqua.Ut enim
+          </p>
+        </div>
+        
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+    <!-- <div
       class="row text-center mt-5 ml-5 py-0 pt-5 text-center"
       style="padding-left: 260px"
     >
@@ -258,7 +350,7 @@
         </p>
       </div>
       <div class="col-md-2 mx-5"></div>
-    </div>
+    </div> -->
   </div>
   <app-footer></app-footer>
 </ion-content>

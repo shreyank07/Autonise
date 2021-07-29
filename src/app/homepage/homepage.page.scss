@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
 .text-color{
     color: cadetblue;
 }
@@ -94,8 +90,65 @@ color: orange;
         -webkit-transform: scale(1.1); /* Safari 3-8 */
         transform: scale(1.1); 
       }
-<<<<<<< HEAD
+      .btn{
+        background-color: #192a56;
+        border-radius: 5px;
+        color: #fff;
+        display: block;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: capitalize;
+        width: 90%;
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+      @import url("https://fonts.googleapis.com/css?family=Ubuntu");
 
-=======
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
-  
+      .cardBody {
+        display: flex;
+        min-height: 100vh;
+        font-family: "Ubuntu", sans-serif;
+      }
+      
+      h1 {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+      }
+      
+      .card {
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        height: 300px;
+        overflow: hidden;
+        width: 70%;
+      }
+      
+      .card > figure {
+        width: 100%;
+      }
+      
+      .card > figure > img {
+        width: 100%;
+      }
+      
+      .details {
+          background-color: #fff;
+          border-radius: 10px;
+          padding: 20px;
+          position: absolute;
+          top: 80%;
+          width: 100%;
+          transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out;
+          height: 232px;
+      }
+      
+      
+      .card:hover .details {
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        top: 24%;
+      }
+      .image{
+        text-align: center;
+        display: block;
+      }

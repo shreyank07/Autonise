@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
-=======
 import { ChowkidaarGuard } from './chowkidaar.guard';
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
 import { ProductPage } from './product/product.page';
 
 const routes: Routes = [
@@ -18,11 +15,7 @@ const routes: Routes = [
     loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
   },
   {
-<<<<<<< HEAD
-    path: 'page1',
-=======
     path: 'login',
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
     loadChildren: () => import('./page1/page1.module').then( m => m.Page1PageModule)
   },
 
@@ -32,13 +25,6 @@ const routes: Routes = [
   },
  
   {
-<<<<<<< HEAD
-    path: 'login',
-    loadChildren: () => import('./page1/page1.module').then( m => m.Page1PageModule)
-  },
-  {
-=======
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
     path: 'men',
     loadChildren: () => import('./mens/mens.module').then( m => m.MensPageModule)
   },
@@ -48,12 +34,8 @@ const routes: Routes = [
   },
   {
     path: 'history',
-<<<<<<< HEAD
-    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
-=======
     loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule),
     canActivate : [ChowkidaarGuard]
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   },
   {
     path: 'women',
@@ -78,12 +60,8 @@ const routes: Routes = [
 
   {
     path: 'cart',
-<<<<<<< HEAD
-    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
-=======
     loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule),
     canActivate : [ChowkidaarGuard]
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   },
   {
     path: 'watches',

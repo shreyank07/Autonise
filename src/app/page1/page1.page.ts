@@ -1,10 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-<<<<<<< HEAD
-=======
 import { UserService } from '../user.service';
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
 
 @Component({
   selector: 'app-page1',
@@ -14,11 +11,7 @@ import { UserService } from '../user.service';
 export class Page1Page implements OnInit {
   users=[];
   todo = {};
-<<<<<<< HEAD
-  constructor(private http: HttpClient) {
-=======
   constructor(private http: HttpClient,private User : UserService,private route : Router) {
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   //    this.http.get('https://www.autonise.com/api/course/catalog/').subscribe((result:any) =>{
   //   console.log(result);
   //  })
@@ -27,24 +20,11 @@ export class Page1Page implements OnInit {
   ngOnInit() {
   }
   email:any;
-<<<<<<< HEAD
-  
-=======
   failedMsg : string;
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   password:any;
 
   login(form,e){
   
-<<<<<<< HEAD
-    if(e.keyCode == 13){
-      if(!form.invalid){
-        console.log(this.todo)
-      }
-    }
-
-   
-=======
     if(e.keyCode == 13 || e.keyCode == undefined){
       if(!form.invalid){
         this.User.login(this.todo).subscribe(data=>{
@@ -57,7 +37,6 @@ export class Page1Page implements OnInit {
       }
     }
 
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   }
 
 }

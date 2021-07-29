@@ -18,29 +18,11 @@ a:active {
   left: auto;
 }
 .dropdown-menu-center {
-<<<<<<< HEAD
-  left: 50% !important;
-=======
   left: 5% !important;
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
   right: auto !important;
 
   transform: translate(-50%, 0) !important;
 }
-<<<<<<< HEAD
-.navbar-brand > h3 {
-  color: #05080e;
-  font-family:  "Brush Script MT", cursive;
-  font-size: 55px;
-  font-weight: 800;
-  line-height: 40px;
-  text-align: center;
-  
-  margin-top: 3px;
-  cursor: pointer;
-}
-
-=======
 // .dropdown-item:active{
 //   color: white !important;
 // }
@@ -48,13 +30,13 @@ a:active {
 //   color: white !important;
 // }
 .navbar-brand > h3 {
-  color: #0855fa;
-  font-family: "Raleway", sans-serif;
-  font-size: 40px;
+  color: #050505;
+  font-family: "Brush Script MT", cursive;
+  font-size: 50px;
   font-weight: 800;
   line-height: 40px;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-top: 3px;
   cursor: pointer;
 }
@@ -86,7 +68,8 @@ a:active {
   font-weight: 500;
 }
 
-.item1{
- //
+
+.logo{
+  font-family: "Brush Script MT", cursive;
+  font-size: 60px;
 }
->>>>>>> 3464d01cc19aeb81e4025f01580a5d2914fa2a0d
